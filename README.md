@@ -1,5 +1,52 @@
-PrBoom 2.5.0
-============
+# prboom3ds
+
+This is my attempt at merging the excellent work done by elhobbs and devinacker
+in their ports of the `prboom` port of the Doom engine to the 3DS.
+
+## Install Instructions
+
+TODO
+
+## Build Instructions
+
+### Set Up Dev Environment
+
+Install `prboom` development dependencies (more information at the section
+**PrBoom 2.5.0** below or in files scattered in this repository)
+
+In general, follow the [instructions for installing
+devkitPro](https://devkitpro.wiki/org/Started_Getting) (and install the
+`3ds-dev` group of packages)
+
+Fedora users can use `toolbox` to avoid installing `pacman` globally, e.g.
+
+1. `toolbox create -c dkp`
+2. `toolbox enter -c dkp`
+3. `sudo dnf install pacman`
+4. [install devkitPro using pacman](https://devkitpro.org/wiki/devkitPro_pacman)
+
+### Build `prboom3ds`
+
+1. TODO
+
+## Planned Features
+
+We'll see how much of this I'll actually be able to finish!
+
+1. add support for tabs on the bottom screen
+   - **keyboard** for elhobbs's keyboard UI
+   - **map** for devinacker's map
+   - **log** for console output (output when saving, etc)
+2. support for analog joystick and circle pad pro for mouse
+   - automatically check for control config and pick based on that?
+3. generate `prboom.cfg` automatically, based on in-application configuration of
+   controls
+   - allow user override of generated `prboom.cfg` if they want to use custom
+     settings
+   - TODO is it possible to update config options for prboom without restarting
+     the engine?
+
+## PrBoom 2.5.0
 
 PrBoom is a version of the classic 3D shoot'em'up game Doom, originally
 written by id Software.
@@ -13,8 +60,7 @@ file COPYING included in this distribution for details.
 
 Please see the NEWS file included for changes since the previous version.
 
-Game data - WADs
-----------------
+### Game data - WADs
 
 (This section is aimed at people not familiar with Doom and the
 data files it uses.)
@@ -38,8 +84,7 @@ from doom19s.zip on Doomworld's shareware download page. But note that you
 will not be able to play most add-ons.
 http://www.doomworld.com/files/shareware.shtml
 
-Windows Installation
---------------------
+### Windows Installation
 
 Just extract the zip to a directory of your choice and copy your IWAD
 files into it. Now you can make shortcuts and add "-iwad filename.wad"
@@ -57,8 +102,7 @@ You should rename the original SDL_mixer.dll before. Tell us if it
 works or not. Please note, that there might be bugs in the native midi
 implementation.
 
-Linux Installation
-------------------
+### Linux Installation
 
 For UNIX, Linux, and other POSIX systems, you need the SDL libraries in
 order to use PrBoom. If you haven't already done so, visit
@@ -71,15 +115,13 @@ above if you don't know what this is) to a directory where PrBoom can find
 it. Make /usr/local/share/games/doom/, and copy your IWAD (all of your
 IWADs, if you own more than one) to that directory.
 
-Mac OS Installation
--------------------
+### Mac OS Installation
 
 Copy your IWAD (see above) into your home folder under
 Library:Application Support:PrBoom (this folder will be created for you the
 first time you run PrBoom).
 
-First Use
----------
+### First Use
 
 If it's the first time you've run PrBoom, you'll need to do some configuring
 to get the controls and display right for you.
@@ -103,8 +145,7 @@ On Mac OS X, you can't use the command line, but after running the program
 once, you can edit YOURHOME:Library:Application Support:PrBoom:prboom.cfg to
 change settings like your screen resolution.
 
-Features
---------
+### Features
 
    This is all the features PrBoom has compared to the original Doom game
    - it's intended to give you an idea of the enhancements, rather than
@@ -223,8 +264,7 @@ Internals
        (DOSDoom, LxDoom)
      * Removed internal limits (BOOM)
 
-Other Tips
-----------
+### Other Tips
 
 On Linux, SDL tries to detect an appropriate video device automatically.
 If you want to overrite the default, you can set the SDL_VIDEODRIVER
@@ -234,8 +274,7 @@ SDL_VIDEODRIVER=fbcon prboom
 or
 SDL_VIDEODRIVER=svga prboom
 
-Details
--------
+### Details
 
 Details on these extra features are split into separate text files:
 
