@@ -776,9 +776,10 @@ void copy_screen(int side) {
 	}
 }
 
-enum automapmode_e automapmode; // Mode that the automap is in
+extern enum automapmode_e automapmode; // Mode that the automap is in
 
-#define	automapactive ((automapmode & am_active) != 0)
+// see the automapactive macro defined above
+
 extern boolean automapontop;
 
 int keyboard_top();
