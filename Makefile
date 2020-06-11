@@ -17,7 +17,7 @@ include $(DEVKITARM)/3ds_rules
 # INCLUDES is a list of directories containing header files
 # SPECS is the directory containing the important build and link files
 #---------------------------------------------------------------------------------
-export TARGET		:=	$(shell basename $(CURDIR))
+export TARGET		:=	prboom3ds
 BUILD		:=	build
 SOURCES		:=	src arm9/source arm11/source helix/fixpt helix/fixpt/real helix/fixpt/real/arm khax
 DATA		:=	dat
@@ -139,7 +139,8 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(TARGET).elf
+	@echo $(BUILD) $(TARGET).3dsx $(TARGET).elf $(TARGET).cia
+	@rm -fr $(BUILD) $(TARGET).3dsx $(TARGET).elf $(TARGET).cia
  
  
  cia:
