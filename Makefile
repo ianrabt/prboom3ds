@@ -143,10 +143,10 @@ clean:
 	@rm -fr $(BUILD) $(TARGET).3dsx $(TARGET).elf $(TARGET).cia
  
  
- cia:
+cia:
 		@make $(MAKEFLAGS) OUTPUT_FORMAT=cia
 
- 3dsx:
+3dsx:
 		@make $(MAKEFLAGS) OUTPUT_FORMAT=3dsx
 
 #---------------------------------------------------------------------------------
