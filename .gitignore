@@ -48,3 +48,10 @@ prboom.sdf
 Debug/prboom.log
 prboom.opensdf
 Debug/prboom.log
+
+# 3DS junk
+*.3dsx
+
+# No copywrite infringement!
+*.wad
+*.WAD
