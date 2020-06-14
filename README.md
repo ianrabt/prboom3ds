@@ -24,6 +24,12 @@ Fedora users can use `toolbox` to avoid installing `pacman` globally, e.g.
 2. `toolbox enter -c dkp`
 3. `sudo dnf install pacman`
 4. [install devkitPro using pacman](https://devkitpro.org/wiki/devkitPro_pacman)
+5. install [makerom](https://github.com/3DSGuy/Project_CTR/releases)
+
+#### using Citra
+
+1. `mkdir -p ~/.local/share/citra-emu/sdmc/3ds/prboom3ds`
+2. `cp DOOM.WAD ~/.local/share/citra-emu/sdmc/3ds/prboom3ds`
 
 ### Build `prboom3ds`
 
@@ -33,7 +39,11 @@ Fedora users can use `toolbox` to avoid installing `pacman` globally, e.g.
 
 We'll see how much of this I'll actually be able to finish!
 
-1. add support for tabs on the bottom screen
+1. port openGL renderer to use C3D graphics library -- this will be hard!  It
+   looks like c3d is fairly similar to openGL, but I am going to need to do a
+   lot of research.  Will improve performance on o3ds -- n3ds is fast enough to
+   use the alternative cpu based renderer.
+2. add support for tabs on the bottom screen
    - **keyboard** for elhobbs's keyboard UI
    - **map** for devinacker's map
    - **log** for console output (output when saving, etc)
